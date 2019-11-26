@@ -21,5 +21,6 @@ jobs:
     - name: Processing audit result ...
       id: processing
       run: node ./script.js
+      if: failure()
       with:
         audit: ${{ steps.audit.outputs.status }}
