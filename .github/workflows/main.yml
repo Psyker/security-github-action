@@ -21,7 +21,3 @@ jobs:
     - name: Processing audit result ...
       id: processing
       run: node ./script.js
-      if: failure()
-    - name: Remove audit result ..
-      id: clean
-      run: rm test.json
