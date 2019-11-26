@@ -13,7 +13,7 @@ jobs:
       run: npm install
     - name : Checking js security vulnerabilities ...
       id: audit
-      run: npm run audit
+      run: npm audit
     - name: Launching js audit fixer ...
       id: fix
       run: echo ${{ steps.audit.outputs.status }}
