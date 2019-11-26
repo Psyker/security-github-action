@@ -18,6 +18,6 @@ jobs:
       id: fix
       run: npm audit fix
       if: failure()
-    name: Processing audit result ...
+    - name: Processing audit result ...
       id: processing
       run: node ./script.js
