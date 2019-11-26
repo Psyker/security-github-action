@@ -16,5 +16,8 @@ jobs:
       run: npm audit
     - name: Launching js audit fixer ...
       id: fix
-      run: echo ${{ steps.audit.outputs.status }}
+      run: npm audit fix
       if: failure()
+    name: Processing audit result ...
+      id: processing
+      run: node ./script.js

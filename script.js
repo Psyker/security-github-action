@@ -4,3 +4,5 @@ const octokit = new Octokit({
     'auth': 'secret',
     'userAgent': 'security-js script'
 });
+
+console.log('hello world');
