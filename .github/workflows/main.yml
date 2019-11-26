@@ -13,11 +13,13 @@ jobs:
       run: npm install
     - name : Checking js security vulnerabilities ...
       id: audit
-      run: npm audit
-    - name: Launching js audit fixer ...
-      id: fix
-      run: npm audit fix --force && echo ::set-output name=status::success
-      if: failure()
+      run: npm audit --json
+#    - name: Launching js audit fixer ...
+#      id: fix
+#      run: npm audit fix --force
+#      if: failure()
     - name: Processing audit result ...
       id: processing
       run: node ./script.js
+      with:
+        audit: ${{ steps.audit.outputs.status }}
