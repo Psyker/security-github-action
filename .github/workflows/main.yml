@@ -17,3 +17,4 @@ jobs:
     - name: Launching js audit fixer ...
       id: fix
       run: echo ${{ steps.audit.outputs.status }}
+      if: failure()
