@@ -1,7 +1,5 @@
-name: CI
-
+name: Security-js
 on: ['push']
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,4 +8,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: npm install
+    - name: Installing dependencies ...
+      id: install
+      run: npm install
+    - name : Checking js security vulnerabilities ...
+      id: audit
+      run: npm run audit
+    - name: Launching js audit fixer ...
+      id: fix
+      run: echo ${{ steps.audit.outputs.status }}
