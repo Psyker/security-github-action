@@ -16,9 +16,8 @@ jobs:
       run: npm audit
     - name: Launching js audit fixer ...
       id: fix
-      run: npm audit fix
+      run: npm audit fix --force && echo ::set-output name=status::success
       if: failure()
     - name: Processing audit result ...
       id: processing
       run: node ./script.js
-      if: failure()

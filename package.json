@@ -160,7 +160,7 @@
         "relay-config": "^5.0.0",
         "relay-devtools": "^1.4.0",
         "relay-runtime": "^5.0.0",
-        "relay-test-utils": "^5.0.0",
+        "relay-test-utils": "^7.1.0",
         "sass-loader": "^7.1.0",
         "source-map": "^0.7.3",
         "stickyfilljs": "^2.1.0",
