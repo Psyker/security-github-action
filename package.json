@@ -29,6 +29,7 @@
         "@storybook/addons": "^5.1.8",
         "@storybook/react": "^5.1.8",
         "@storybook/storybook-deployer": "^2.3.0",
+        "actions-toolkit": "^2.2.0",
         "autosize": "^4.0.2",
         "babel-cli": "^6.26.0",
         "babel-core": "^7.0.0-bridge.0",
@@ -176,7 +177,8 @@
         "webpack-bundle-analyzer": "^3.3.2",
         "webpack-cli": "^3.3.0",
         "webpack-merge": "^4.2.1",
-        "xml2json": "^0.11.2"
+        "xml2json": "^0.11.2",
+        "dedent": "latest"
     },
     "version": "1.3.2",
     "resolutions": {

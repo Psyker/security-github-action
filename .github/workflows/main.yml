@@ -11,14 +11,8 @@ jobs:
     - name: Installing dependencies ...
       id: install
       run: npm install
-    - name : Checking js security vulnerabilities ...
+    - name: Processing audit
       id: audit
-      run: npm audit --json >> test.json
-#    - name: Launching js audit fixer ...
-#      id: fix
-#      run: npm audit fix --force
-#      if: failure()
-    - name: Processing audit result ...
-      id: processing
-      run: node ./script.js
-      if: failure()
+      run: node ./index.js
+      env:
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
