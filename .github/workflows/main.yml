@@ -1,5 +1,8 @@
 name: Security-js
-on: ['push']
+on:
+  push:
+    branches:
+      - 'master'
 jobs:
   build:
     runs-on: ubuntu-latest
