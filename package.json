@@ -97,7 +97,7 @@
         "leaflet-geosearch": "^2.6.0",
         "leaflet.locatecontrol": "^0.62.0",
         "leaflet.markercluster": "^1.4.1",
-        "lint-staged": "^8.2.1",
+        "lint-staged": "^13.2.2",
         "lodash": "^4.17.13",
         "mailcheck": "^1.1.1",
         "mini-css-extract-plugin": "^0.7.0",
